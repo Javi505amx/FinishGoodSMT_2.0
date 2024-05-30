@@ -17,7 +17,7 @@
 <body>
     <form runat="server" >
         <div class="container-fluid d-flex align-items-center align-content-center bg-body-tertiary ">
-                    <div style="" class=" container text-center p-5 mt-0 rounded w-50 bg-body-tertiary">
+                    <div  class=" container text-center p-5 mt-0 rounded w-50 bg-body-tertiary">
                         <%-- alerta --%>
                         <div runat="server" id="alert" visible="false" class="" role="alert">
                             <span id="AlertIcon" runat="server" class=" me-2" role="img"></span>
