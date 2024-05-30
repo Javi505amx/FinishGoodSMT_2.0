@@ -34,7 +34,6 @@
                         <asp:LinkButton runat="server" ID="btnHome" class=" btn btn-dark" title="Inicio -  Homepage" PostBackUrl="~/menu.aspx" Text="Home">
     <span><i class="bi bi-house-fill fs-5"></i> </span>
                         </asp:LinkButton>
-                        <%--<asp:LinkButton runat="server" ID="LinkButton1" class="btn btn-dark"><i class="bi bi-person-circle fs-5" ></i></asp:LinkButton>--%>
                         <asp:LinkButton type="button" ID="logoutBtn" runat="server" class=" btn btn-dark text-danger fs-5" OnClientClick="if (!confirm('¿Está seguro que desea salir del sistema?')) return false;" PostBackUrl="~/login.aspx" title="Exit System">
 <span class="btn-label"><i  class="bi bi-box-arrow-right"></i></span> 
                         </asp:LinkButton>
@@ -46,7 +45,6 @@
                         <div class="btn-group ">
                             <asp:LinkButton runat="server" ID="userBtn" class="btn btn-dark"><i class="bi bi-person-circle" ></i></asp:LinkButton>
                             <asp:Label runat="server" ID="userlabel" class=" btn  btn-dark"></asp:Label>
-                            <%--<asp:Label runat="server"  ID="userlabel" Font-Size="Smaller" Text="Javier " title="User"></asp:Label>--%>
                         </div>
                     </div>
                 </div>
