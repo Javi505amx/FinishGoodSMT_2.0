@@ -64,7 +64,6 @@ namespace FinishGoodSMT
                         alertText.Text = "No fue posible reparar la falla, Algo ha ocurrido, por favor contacte a IT.";
                         ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",4000)</script>");
                     }
-
                 }
                 catch (Exception ex)
                 {
