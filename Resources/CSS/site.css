@@ -1,0 +1,142 @@
+#logo {
+  width: 200px;
+  text-align: center;
+}
+
+/* html {
+  min-height: 100vh;
+  font-size: rem;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100vh;
+} */
+/* ================MEDIA QUERIES================= */
+/* monitor */
+@media (min-width: 1400px) {
+  html {
+    min-height: 100vh;
+    font-size: 1em;
+  }
+  #logo {
+    width: 200px;
+    text-align: center;
+  }
+  #btnScrap,
+  #btnscrapsalida,
+  #btnreparacion,
+  #btnConsultaMain,
+  #btnScanWo {
+    font-size: 1.8em;
+    width: 65%;
+    margin: auto;
+  }
+}
+@media (min-width: 1100px) {
+  /*code for laptop*/
+  #logo {
+    width: 200px;
+    text-align: center;
+  }
+  html {
+    min-height: 100vh;
+    font-size: 0.88em;
+  }
+  #btnScrap,
+  #btnscrapsalida,
+  #btnreparacion,
+  #btnConsultaMain,
+  #btnScanWo {
+    font-size: 1.4em;
+    text-wrap: balance;
+    width: 70%;
+    margin: auto;
+  }
+}
+@media (max-width: 1100px) {
+  /*code for ipad and netbooks*/
+  /*code for laptop*/
+  html {
+    min-height: 100vh;
+    font-size: 1em;
+  }
+  #logo {
+    width: 200px;
+    text-align: center;
+  }
+  #btnScrap,
+  #btnscrapsalida,
+  #btnreparacion,
+  #btnConsultaMain,
+  #btnScanWo {
+    font-size: 1em;
+    text-wrap: balance;
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (max-width: 850px) {
+}
+/* mediana  mital laptop*/
+@media (min-width: 550px) {
+  html {
+    min-height: 100vh;
+    font-size: 0.88em;
+  }
+  img {
+    width: 200px;
+    margin-left: 0;
+  }
+
+  body {
+    min-width: 100%;
+    min-height: 100vh;
+  }
+  #myTable {
+    font-size: 1em;
+  }
+  #btnScrap,
+  #btnscrapsalida,
+  #btnreparacion,
+  #btnConsultaMain,
+  #btnScanWo {
+    font-size: 1.4em;
+    width: 65%;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  /*code for mobile here*/
+  #myTable {
+    font-size: 5em;
+  }
+  html {
+    font-size: 1rem;
+    text-wrap: balance;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  #btnScrap,
+  #btnscrapsalida,
+  #btnreparacion,
+  #btnConsultaMain,
+  #btnScanWo {
+    font-size: 4em;
+    width: 100%;
+  }
+  .container p {
+    font-size: small;
+  }
+  .container a span i {
+    font-size: 1.3em;
+  }
+  .conatiner a span {
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+  }
+}
+
+@media (max-width: 360px) {
+}

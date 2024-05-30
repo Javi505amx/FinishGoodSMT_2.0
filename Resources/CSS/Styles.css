@@ -1,0 +1,133 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-nav > a {
+  margin-left: -150px;
+}
+
+.container a span {
+  width: 1.9em;
+  height: 1.9em;
+}
+
+.container {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* scan WO */
+
+input[type='text'],
+input[type='password'] {
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+
+#txtWorkOrder,
+#txtQRMain,
+#txtQty {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.input-field {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+#alert {
+  position: fixed;
+  bottom: 0;
+}
+
+#QR {
+  /* border: 1px solid #02be79; */
+  margin-top: 0;
+  padding: 0;
+  margin: auto 1em;
+}
+
+#txtWorkOrderScrap,
+#txtWorkOrderRepair {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.txtWorkOrderRepair {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid #ffbe00;
+  color: #ffbe00;
+}
+.txtWorkOrderFinish {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid #00754b;
+  color: #00754b;
+}
+
+.txtWorkOrderScrap {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid #f41b35;
+  color: #f41b35;
+}
+
+/**Gridpager**/
+.GridPager a,
+.GridPager span {
+    display: block;
+    height: 35px;
+    width: 35px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.GridPager a {
+    border-radius: 5px;
+    background-color: #fff;
+    color: #0d6efd;
+    border: 1px solid #969696;
+    padding: 0.4rem;
+    gap: 15px;
+}
+
+.GridPager span {
+    border-radius: 5px;
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 0.4rem;
+}
