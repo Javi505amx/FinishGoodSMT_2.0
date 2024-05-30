@@ -1,1 +1,2 @@
-# FinishGoodSMT_2.0
+# FinishGoodSMT Project
+### Introduction
