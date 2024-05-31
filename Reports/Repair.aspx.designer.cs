@@ -78,31 +78,31 @@ namespace FinishGoodSMT.Reports
         protected global::System.Web.UI.WebControls.Label userlabel;
 
         /// <summary>
-        /// fromDate control.
+        /// alerts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fromDate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alerts;
 
         /// <summary>
-        /// toDate control.
+        /// AlertIcon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox toDate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertIcon;
 
         /// <summary>
-        /// TextBox1 control.
+        /// alertText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button TextBox1;
+        protected global::System.Web.UI.WebControls.Label alertText;
 
         /// <summary>
         /// CancelBtn control.
@@ -166,32 +166,5 @@ namespace FinishGoodSMT.Reports
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton ExportBtn;
-
-        /// <summary>
-        /// alert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert;
-
-        /// <summary>
-        /// AlertIcon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertIcon;
-
-        /// <summary>
-        /// alertText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label alertText;
     }
 }
