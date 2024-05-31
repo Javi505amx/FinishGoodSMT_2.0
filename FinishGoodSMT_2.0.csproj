@@ -87,6 +87,7 @@
     <Content Include="RepairValidation.aspx" />
     <Content Include="Reports\Repair.aspx" />
     <Content Include="Reports\FG.aspx" />
+    <Content Include="Reports\Scrap.aspx" />
     <Content Include="ScanScard.aspx" />
     <Content Include="ScanWo.aspx" />
     <Content Include="ScanWoRepair.aspx" />
@@ -156,6 +157,13 @@
     </Compile>
     <Compile Include="Reports\FG.aspx.designer.cs">
       <DependentUpon>FG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Scrap.aspx.cs">
+      <DependentUpon>Scrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Scrap.aspx.designer.cs">
+      <DependentUpon>Scrap.aspx</DependentUpon>
     </Compile>
     <Compile Include="ScanScard.aspx.cs">
       <DependentUpon>ScanScard.aspx</DependentUpon>
