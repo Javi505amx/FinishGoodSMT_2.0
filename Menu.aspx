@@ -48,8 +48,8 @@
             <asp:LinkButton ID="btnScanWo" CssClass="btn btn-success btn-lg  rounded-5 d-flex align-items-center justify-content-center mb-2 " runat="server" Visible="true" PostBackUrl="~/ScanWo.aspx">
                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-cpu text-success align-items-center"></i></span>Finish good
             </asp:LinkButton>
-            <asp:LinkButton ID="btnConsultaMain" CssClass="btn btn-secondary btn-lg   rounded-5 d-flex align-items-center justify-content-center mb-2  " runat="server" Visible="true" PostBackUrl="~/ReportFG.aspx">
-                   <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-search text-secondary"></i></span>Reporte de Workorder
+            <asp:LinkButton ID="btnConsultaMain" CssClass="btn btn-secondary btn-lg   rounded-5 d-flex align-items-center justify-content-center mb-2  " runat="server" Visible="true" PostBackUrl="~/Reports.aspx">
+                   <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-search text-secondary"></i></span>Reportes
             </asp:LinkButton>
             <%--            <asp:LinkButton ID="btnConsultaScard" CssClass="btn btn-secondary btn-lg rounded-5 d-flex align-items-center justify-content-center " runat="server" Visible="true" PostBackUrl="~/WoReviewSMTScard.aspx">
                   <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-card-checklist text-secondary"></i></span>Consulta de WO(Scard)
@@ -61,7 +61,7 @@
             <asp:LinkButton ID="btnscrapsalida" CssClass="btn btn-primary btn-lg  rounded-5 d-flex align-items-center justify-content-center mb-2  " runat="server" Visible="true" PostBackUrl="~/RepairValidation.aspx">
                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-check2-circle text-primary mx-auto"></i></span>Validar reparación
             </asp:LinkButton>
-            <asp:LinkButton ID="btnScrap" CssClass="btn btn-danger btn-lg   rounded-5 d-flex align-items-center justify-content-center  mb-2  " runat="server" Visible="true" PostBackUrl="~/MainScrap.aspx">
+            <asp:LinkButton ID="btnScrap" CssClass="btn btn-danger btn-lg   rounded-5 d-flex align-items-center justify-content-center  mb-2  " runat="server" Visible="true" PostBackUrl="~/ScanWoScrap.aspx">
                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-trash3-fill text-danger "></i></span>SCRAP
             </asp:LinkButton>
         </div>
