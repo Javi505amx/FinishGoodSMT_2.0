@@ -88,7 +88,7 @@
                             <asp:BoundField DataField="ddlScrap" HeaderText="Descripcion"  ItemStyle-HorizontalAlign="Center"  />
                             <asp:BoundField DataField="Comments" HeaderText="Comentarios" ItemStyle-HorizontalAlign="Center"  />
                             <asp:BoundField DataField="Result" HeaderText="Origen"   ItemStyle-HorizontalAlign="Center"  />
-                            <asp:BoundField DataField="ScanDate" HeaderText="Fecha"   ItemStyle-HorizontalAlign="Center"  />
+                            <asp:BoundField DataField="ScanDate"  DataFormatString="{0:yyyy-MM-dd}" HeaderText="Fecha"   ItemStyle-HorizontalAlign="Center"  />
                         </Columns>
                         <PagerStyle CssClass="GridPager" />
                     </asp:GridView>
