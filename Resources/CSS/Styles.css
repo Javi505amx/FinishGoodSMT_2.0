@@ -131,3 +131,9 @@ input[type='password'] {
     color: #fff;
     padding: 0.4rem;
 }
+
+
+#myTable {
+    table-layout: auto;
+    width: 100%;
+}
