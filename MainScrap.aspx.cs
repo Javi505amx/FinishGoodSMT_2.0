@@ -242,7 +242,7 @@ namespace FinishGoodSMT
                 sqlCommand3.Parameters.Add("@UserScan", SqlDbType.VarChar, 30).Value = userlabel.Text.ToLower();
                 sqlCommand3.Parameters.Add("@ScanDate", SqlDbType.DateTime, 50).Value = DateTime.Now;
                 sqlCommand3.Parameters.Add("@Comments", SqlDbType.VarChar, 150).Value = comments.Text.ToString();
-                sqlCommand3.Parameters.Add("@ddlScrap", SqlDbType.VarChar, 10).Value = ddlScrap.SelectedValue.ToString();
+                sqlCommand3.Parameters.Add("@ddlScrap", SqlDbType.VarChar, 35).Value = ddlScrap.SelectedValue.ToString();
                 sqlCommand3.CommandTimeout = 9000;
                 SqlDataReader sqlDataReader2 = sqlCommand3.ExecuteReader();
                 sqlDataReader2.Read();
