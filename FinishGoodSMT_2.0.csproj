@@ -84,16 +84,30 @@
     <Content Include="MainScan.aspx" />
     <Content Include="MainScrap.aspx" />
     <Content Include="Menu.aspx" />
+    <Content Include="RepairScard.aspx" />
+    <Content Include="RepairScardValidation.aspx" />
     <Content Include="RepairValidation.aspx" />
     <Content Include="Reports\Repair.aspx" />
     <Content Include="Reports\FG.aspx" />
     <Content Include="Reports\Scrap.aspx" />
+    <Content Include="Reports\Stock.aspx" />
+    <Content Include="Reports\StockFG.aspx" />
     <Content Include="ScanScard.aspx" />
     <Content Include="ScanWo.aspx" />
     <Content Include="ScanWoRepair.aspx" />
+    <Content Include="ScanWOScardValidation.aspx" />
     <Content Include="ScanWoScrap.aspx" />
     <Content Include="ScrapMain.aspx" />
     <Content Include="ScrapScard.aspx" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Users.aspx" />
     <Content Include="ViewFailures.aspx" />
     <Content Include="Web.config" />
@@ -137,6 +151,20 @@
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepairScard.aspx.cs">
+      <DependentUpon>RepairScard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairScard.aspx.designer.cs">
+      <DependentUpon>RepairScard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairScardValidation.aspx.cs">
+      <DependentUpon>RepairScardValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairScardValidation.aspx.designer.cs">
+      <DependentUpon>RepairScardValidation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RepairValidation.aspx.cs">
       <DependentUpon>RepairValidation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +193,20 @@
     <Compile Include="Reports\Scrap.aspx.designer.cs">
       <DependentUpon>Scrap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Stock.aspx.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock.aspx.designer.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockFG.aspx.cs">
+      <DependentUpon>StockFG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StockFG.aspx.designer.cs">
+      <DependentUpon>StockFG.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ScanScard.aspx.cs">
       <DependentUpon>ScanScard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +227,13 @@
     </Compile>
     <Compile Include="ScanWoRepair.aspx.designer.cs">
       <DependentUpon>ScanWoRepair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScanWOScardValidation.aspx.cs">
+      <DependentUpon>ScanWOScardValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScanWOScardValidation.aspx.designer.cs">
+      <DependentUpon>ScanWOScardValidation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ScanWoScrap.aspx.cs">
       <DependentUpon>ScanWoScrap.aspx</DependentUpon>
@@ -238,6 +287,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Scripts\moment.min.js.map" />
+    <Content Include="Scripts\moment-with-locales.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

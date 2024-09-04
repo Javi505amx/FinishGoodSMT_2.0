@@ -11,7 +11,7 @@ namespace FinishGoodSMT
 {
 
 
-    public partial class ScrapScard
+    public partial class RepairScard
     {
 
         /// <summary>

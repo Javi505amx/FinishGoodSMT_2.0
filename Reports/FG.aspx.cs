@@ -55,7 +55,6 @@ namespace FinishGoodSMT
         }
         private void BindGridView()
         {
-
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand("GetDashboardFG", connection);
@@ -71,10 +70,6 @@ namespace FinishGoodSMT
                     myTable.AllowPaging = true;
                     myTable.DataBind();
                     connection.Close();
-                    //AlertIcon.Attributes.Add("class", "bi bi-clipboard2-data");
-                    //alert.Attributes.Add("class", " alert alert-danger  alert-dismissible ");
-                    //alertText.Text = "Query Executed Succesfully ";
-                    //ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",2500)</script>");
                 }
                 else
                 {
@@ -84,7 +79,6 @@ namespace FinishGoodSMT
                     alertText.Text = "Data Not Found";
                     ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",5000)</script>");
                 }
-
             }
         }
 

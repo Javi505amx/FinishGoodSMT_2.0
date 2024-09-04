@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-using System.EnterpriseServices.CompensatingResourceManager;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,21 +10,21 @@ using System.Web.UI.WebControls;
 
 namespace FinishGoodSMT
 {
-    public partial class ScanWoRepair : System.Web.UI.Page
+    public partial class ScanWOScardValidation : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void txtWorkOrderRepair_TextChanged(object sender, EventArgs e)
+        protected void txtWorkOrdeValidation_TextChanged(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             SqlCommand sqlCommand1 = new SqlCommand("GetModelQtyByWorkOrder", connection);
             sqlCommand1.CommandType = CommandType.StoredProcedure;
             SqlCommand sqlCommand2 = sqlCommand1;
             connection.Open();
-            sqlCommand2.Parameters.Add("@WorkOrder", SqlDbType.VarChar, 50).Value = (object)txtWorkOrderRepair.Text.ToUpper();
+            sqlCommand2.Parameters.Add("@WorkOrder", SqlDbType.VarChar, 50).Value = (object)txtWorkOrdeValidation.Text.ToUpper();
             SqlDataReader sqlDataReader = sqlCommand2.ExecuteReader();
             sqlDataReader.Read();
             try
@@ -45,7 +44,7 @@ namespace FinishGoodSMT
                 {
                     if (!(str2.Substring(0, 3) == "MX2"))
                         return;
-                    Response.Redirect("RepairScard.aspx");
+                    Response.Redirect("RepairScardValidation.aspx");
 
                 }
             }
@@ -56,9 +55,10 @@ namespace FinishGoodSMT
                 alert.Attributes.Add("class", " alert alert-danger  alert-dismissible text-center w-100 fixed-bottom ");
                 alertText.Text = "Workorder no existe, verifíque el QR o inténtelo de nuevo...";
                 ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",6000)</script>");
-                txtWorkOrderRepair.Text = string.Empty;
-                txtWorkOrderRepair.Focus();
+                txtWorkOrdeValidation.Text = string.Empty;
+                txtWorkOrdeValidation.Focus();
             }
+
         }
     }
 }

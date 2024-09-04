@@ -66,7 +66,7 @@
             </div>
             <div class="form-row mt-3">
                 <div class="rounded table-responsive ">
-                    <asp:GridView runat="server" ID="myTable"  HeaderStyle-HorizontalAlign="Center" CssClass="table table-hover table-bordered" Font-Size="X-Small" ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" BorderStyle="None">
+                    <asp:GridView runat="server" ID="myTable" OnPageIndexChanging="myTable_PageIndexChanging"  HeaderStyle-HorizontalAlign="Center" CssClass="table table-hover table-bordered" Font-Size="Smaller" ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" BorderStyle="None">
                         <HeaderStyle CssClass="table-dark" />
                         <RowStyle CssClass=" " />
                         <EmptyDataTemplate>
@@ -88,7 +88,7 @@
                             <asp:BoundField DataField="ddlScrap" HeaderText="Descripcion"  ItemStyle-HorizontalAlign="Center"  />
                             <asp:BoundField DataField="Comments" HeaderText="Comentarios" ItemStyle-HorizontalAlign="Center"  />
                             <asp:BoundField DataField="Result" HeaderText="Origen"   ItemStyle-HorizontalAlign="Center"  />
-                            <asp:BoundField DataField="ScanDate"  DataFormatString="{0:yyyy-MM-dd}" HeaderText="Fecha"   ItemStyle-HorizontalAlign="Center"  />
+                            <asp:BoundField DataField="ScanDate"  DataFormatString="{0:yyyy-MM-dd HH:mm tt}" HeaderText="Fecha"   ItemStyle-HorizontalAlign="Center"  />
                         </Columns>
                         <PagerStyle CssClass="GridPager" />
                     </asp:GridView>

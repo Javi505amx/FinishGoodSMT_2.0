@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
+using System.IO;
 
 namespace FinishGoodSMT.Reports
 {
@@ -14,10 +16,11 @@ namespace FinishGoodSMT.Reports
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                BindGridView();
-            }
+            //if (!IsPostBack)
+            //{
+            //    BindGridView();
+            //}
+            ExportBtn.Visible = true;
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
@@ -68,64 +71,44 @@ namespace FinishGoodSMT.Reports
 
         }
 
-        protected void RefreshBtn_Click(object sender, EventArgs e)
-        {
 
-        }
+       
+        //private void BindGridView()
+        //{
 
-        protected void myTable_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
+        //    using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
+        //    {
+        //        //SqlCommand sqlCommand = new SqlCommand("ReportRepair", connection);
+        //        SqlCommand sqlCommand = new SqlCommand("GetRepairsLog", connection);
 
-        }
+        //        sqlCommand.CommandType = CommandType.StoredProcedure;
+        //        sqlCommand.CommandTimeout = 10000;
+        //        connection.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+        //        DataSet data = new DataSet();
+        //        adapter.Fill(data);
+        //        if (data.Tables.Count > 0)
+        //        {
+        //            myTable.DataSource = data.Tables[0];
+        //            myTable.AllowPaging = true;
+        //            myTable.DataBind();
+        //            connection.Close();
+        //            //AlertIcon.Attributes.Add("class", "bi bi-clipboard2-data");
+        //            //alert.Attributes.Add("class", " alert alert-danger  alert-dismissible ");
+        //            //alertText.Text = "Query Executed Succesfully ";
+        //            //ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",2500)</script>");
+        //        }
+        //        else
+        //        {
+        //            alerts.Visible = true;
+        //            AlertIcon.Attributes.Add("class", " bi bi-exclamation-octagon");
+        //            alerts.Attributes.Add("class", " alert alert-danger  alert-dismissible ");
+        //            alertText.Text = "Data Not Found";
+        //            ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alerts.ClientID + "').style.display='none'\",5000)</script>");
+        //        }
 
-        protected void myTable_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-
-        }
-
-        protected void myTable_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void TextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BindGridView()
-        {
-
-            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand("ReportRepair", connection);
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.CommandTimeout = 10000;
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-                DataSet data = new DataSet();
-                adapter.Fill(data);
-                if (data.Tables.Count > 0)
-                {
-                    myTable.DataSource = data.Tables[0];
-                    myTable.AllowPaging = true;
-                    myTable.DataBind();
-                    connection.Close();
-                    //AlertIcon.Attributes.Add("class", "bi bi-clipboard2-data");
-                    //alert.Attributes.Add("class", " alert alert-danger  alert-dismissible ");
-                    //alertText.Text = "Query Executed Succesfully ";
-                    //ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",2500)</script>");
-                }
-                else
-                {
-                    alerts.Visible = true;
-                    AlertIcon.Attributes.Add("class", " bi bi-exclamation-octagon");
-                    alerts.Attributes.Add("class", " alert alert-danger  alert-dismissible ");
-                    alertText.Text = "Data Not Found";
-                    ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alerts.ClientID + "').style.display='none'\",5000)</script>");
-                }
-
-            }
-        }
+        //    }
+        //}
 
         public void DataFilter()
         {
@@ -165,6 +148,72 @@ namespace FinishGoodSMT.Reports
                     filterText.Text = string.Empty;
 
             }
+        }
+
+        public void Excel()
+        {
+            //1.bind with paging disabled
+            myTable.AllowPaging = false;
+            myTable.DataBind();
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.xls");
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using (StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+
+                //To Export all pages
+                myTable.AllowPaging = false;
+                //this.BindGridView();
+
+                myTable.HeaderRow.BackColor = Color.White;
+                foreach (TableCell cell in myTable.HeaderRow.Cells)
+                {
+                    cell.BackColor = myTable.HeaderStyle.BackColor;
+                }
+                foreach (GridViewRow row in myTable.Rows)
+                {
+                    row.BackColor = Color.White;
+                    foreach (TableCell cell in row.Cells)
+                    {
+                        if (row.RowIndex % 2 == 0)
+                        {
+                            cell.BackColor = myTable.AlternatingRowStyle.BackColor;
+                        }
+                        else
+                        {
+                            cell.BackColor = myTable.RowStyle.BackColor;
+                        }
+                        cell.CssClass = "textmode";
+                    }
+                }
+
+                myTable.RenderControl(hw);
+
+                //style to format numbers to string
+                string style = @"<style> .textmode { } </style>";
+                Response.Write(style);
+                Response.Output.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
+            }
+
+            myTable.AllowPaging = true;
+            myTable.DataBind();
+
+
+        }
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            /* Confirms that an HtmlForm control is rendered for the specified ASP.NET
+               server control at run time. */
+        }
+
+        protected void ExportBtn_Click(object sender, EventArgs e)
+        {
+            Excel();
         }
     }
 }

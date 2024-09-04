@@ -5,7 +5,6 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" title="Finish Good SMT - SCRAP" />
     <link href="./resources/images/inventronics icon.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="Resources/CSS/styles.css" />
     <link rel="stylesheet" href="Resources/CSS/site.css" />
@@ -24,7 +23,7 @@
                 </button>
                 <div class="collapse navbar-collapse mx-auto px-0" id="navbarSupportedContent">
                     <div class="btn-group ">
-                       <%-- <asp:LinkButton runat="server" class="btn btn-dark " ID="LinkButton3" PostBackUrl="~/Menu.aspx" Text="Regresar" title="Menu - Finish good SMT">
+                        <%-- <asp:LinkButton runat="server" class="btn btn-dark " ID="LinkButton3" PostBackUrl="~/Menu.aspx" Text="Regresar" title="Menu - Finish good SMT">
     <span><i class="bi bi-chevron-left fs-5 text-white"></i> </span>
                         </asp:LinkButton>--%>
                         <asp:LinkButton runat="server" ID="btnHome" class=" btn btn-dark " title="Inicio -  Homepage" PostBackUrl="~/menu.aspx" Text="Home">
@@ -90,8 +89,6 @@
                             <asp:Label ID="dataQtyRepair" runat="server" CssClass=" text-warning fs-4 fw-bold"></asp:Label><br />
                             <asp:Label CssClass=" fs-4 fw-bold " ID="Label10" runat="server" Text="Scrap: "></asp:Label>
                             <asp:Label CssClass="text-danger fs-4 fw-bold" runat="server" ID="dataQtyScrap"></asp:Label><br />
-                            <%--<asp:Label CssClass="fs-4 fw-bold" runat="server" Text-="Scrap Dia:" ID="labelscrap"></asp:Label><br />
-                            <asp:Label CssClass="fs-4 text-danger fw-bold" runat="server" ID="dataAcumDiaScrap" Text="adsfvsd"></asp:Label>--%>
                         </div>
                     </div>
                 </div>
@@ -108,7 +105,7 @@
                             <asp:LinkButton CssClass="text-danger" ID="LinkButton1" runat="server" Visible="true" OnClick="btnReset_Click"><span class="bi bi-arrow-repeat p-2"></span></asp:LinkButton>
                         </div>
                         <div class="row g-4 mx-2" runat="server" id="divScrap" visible="false">
-                        <label class="text-start text-body-secondary "> Ingrese la siguiente información requerida para mandar la unidad a scrap</label>
+                            <label class="text-start text-body-secondary ">Ingrese la siguiente información requerida para mandar la unidad a scrap</label>
                             <div class="col-md-4 form-floating">
                                 <asp:DropDownList runat="server" ID="ddlScrap" class="form-select" AutoPostBack="true" OnSelectedIndexChanged="ddlScrap_SelectedIndexChanged" OnTextChanged="ddlScrap_TextChanged">
                                     <asp:ListItem>Seleccione una opcion</asp:ListItem>
@@ -118,6 +115,7 @@
                                     <asp:ListItem Value="Depanelizado   " Text="Depanelizado "></asp:ListItem>
                                     <asp:ListItem Value="Depanelizado - BOT   " Text="Depanelizado - BOT "></asp:ListItem>
                                     <asp:ListItem Value="Depanelizado - TOP   " Text="Depanelizado - TOP "></asp:ListItem>
+                                    <asp:ListItem Value="Skippeado   " Text="Skippeado   "></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingSelect" class="text-danger mx-2">Detalle de SCRAP</label>
                                 <asp:RequiredFieldValidator CssClass="text-danger fw-bold mx-2" InitialValue="Seleccione una opcion" Font-Size="Small" SetFocusOnError="true" ErrorMessage="Seleccione una opción" ValidationGroup="fields" ControlToValidate="ddlScrap" runat="server" />

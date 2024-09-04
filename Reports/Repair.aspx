@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Repair.aspx.cs" Inherits="FinishGoodSMT.Reports.Repair" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Repair.aspx.cs" EnableEventValidation="false" Inherits="FinishGoodSMT.Reports.Repair" %>
 
 <!DOCTYPE html>
 
@@ -16,6 +16,10 @@
     <title>Reparacion - Conteo de unidades por WO</title>
 </head>
 <body>
+    <style type="text/css">
+  
+   
+    </style>
     <form id="form1" runat="server">
         <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark">
             <div class="container-fluid">
@@ -48,11 +52,7 @@
                 </div>
             </div>
         </nav>
-
-
-
-        <div class="container mt-3  mx-auto ">
-
+        <div class="container  mt-3  mx-auto ">
             <div class="form-group mb-3 ">
                 <%-- alerta --%>
                 <div runat="server" id="alerts" visible="false" class="w-100 container" role="alert">
@@ -65,42 +65,70 @@
                     <asp:LinkButton ID="QueryBtn" Visible="true" CssClass="btn btn-dark fw-bold " OnClick="QueryBtn_Click" runat="server" ToolTip="Click to enable query"><i runat="server" class="bi bi-binoculars-fill"></i></asp:LinkButton>
                     <asp:TextBox ID="filterText" CssClass="form-control filter" Enabled="false" TextMode="Search" AutoPostBack="true" OnTextChanged="filterText_TextChanged" runat="server" AutoCompleteType="Disabled" class="form-control" placeholder="Search by WorkOrder or Model"></asp:TextBox>
                     <asp:LinkButton ID="SearchBtn" Visible="false" CssClass=" btn btn-dark fw-bold" OnClick="SearchBtn_Click" runat="server" Text="" ToolTip="Search"><i class="bi bi-search"></i></asp:LinkButton>
-                    <asp:LinkButton ID="RefreshBtn" Visible="false" CssClass=" btn btn-primary fw-bold" runat="server" OnClick="RefreshBtn_Click" Text="" ToolTip="Refresh table"><i class="bi bi-arrow-clockwise"></i></asp:LinkButton>
+                    <asp:LinkButton ID="RefreshBtn" Visible="false" CssClass=" btn btn-primary fw-bold" runat="server" Text="" ToolTip="Refresh table"><i class="bi bi-arrow-clockwise"></i></asp:LinkButton>
                 </div>
             </div>
 
 
-            <div class="form-row mt-3">
-                <div class="rounded table-responsive ">
-                    <asp:GridView runat="server" ID="myTable" OnRowDataBound="myTable_RowDataBound" HeaderStyle-HorizontalAlign="Center" OnPageIndexChanging="myTable_PageIndexChanging" OnSelectedIndexChanged="myTable_SelectedIndexChanged" CssClass="table  table-hover table-bordered " ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" BorderStyle="None">
-                        <%--DataSourceID="SqlDataSource3"--%>
-                        <HeaderStyle CssClass="table-dark" />
-                        <EmptyDataTemplate>
-                            <div class="empty-state">
-                                <div class="empty-state__content">
-                                    <div class="empty-state__icon text-center">
-                                        <img src="../Resources/images/skull.png" alt="...">
-                                    </div>
-                                    <div class="empty-state__message text-center">No records has been added yet.</div>
-                                    <div class="empty-state__help">
-                                    </div>
+            <div class="rounded  table-responsive ">
+                <asp:GridView runat="server" ID="myTable"
+                    HeaderStyle-HorizontalAlign="Center" CssClass="table table-hover  scrolling-table-container  " BorderStyle="None" ShowHeaderWhenEmpty="true" AllowCustomPaging="True" DataSourceID="SqlDataSource1" AllowPaging="false" AllowSorting="True" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" InsertVisible="False" SortExpression="ID"></asp:BoundField>
+                        <asp:BoundField DataField="WorkOrder" HeaderText="WorkOrder" SortExpression="WorkOrder">
+                            <ItemStyle Width="28%"></ItemStyle>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model"></asp:BoundField>
+                        <asp:BoundField DataField="SerialNumber" HeaderText="SerialNumber" SortExpression="SerialNumber"></asp:BoundField>
+                        <asp:BoundField DataField="FailureMode" HeaderText="FailureMode" SortExpression="FailureMode"></asp:BoundField>
+                        <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location"></asp:BoundField>
+                        <asp:BoundField DataField="Side" HeaderText="Side" SortExpression="Side"></asp:BoundField>
+                        <asp:BoundField DataField="userDx" HeaderText="userDx" SortExpression="userDx"></asp:BoundField>
+                        <asp:BoundField DataField="dx_Date" HeaderText="dx_Date" SortExpression="dx_Date"></asp:BoundField>
+                        <asp:CheckBoxField DataField="Status" HeaderText="Status" SortExpression="Status"></asp:CheckBoxField>
+                        <asp:BoundField DataField="date_Release" HeaderText="date_Release" SortExpression="date_Release"></asp:BoundField>
+                        <asp:BoundField DataField="userRelease" HeaderText="userRelease" SortExpression="userRelease"></asp:BoundField>
+                    </Columns>
+                    <HeaderStyle VerticalAlign="Middle" HorizontalAlign="Center" CssClass="table-secondary text-decoration-none" />
+                    <RowStyle VerticalAlign="Middle" HorizontalAlign="Center" />
+
+                    <EmptyDataTemplate>
+                        <div class="empty-state">
+                            <div class="empty-state__content">
+                                <div class="empty-state__icon text-center">
+                                    <img src="../Resources/images/skull.png" alt="...">
+                                </div>
+                                <div class="empty-state__message text-center">No records has been added yet.</div>
+                                <div class="empty-state__help">
                                 </div>
                             </div>
-                        </EmptyDataTemplate>
-                        <Columns>
-                            <asp:BoundField DataField="WorkOrder" HeaderText="WorkOrder" ReadOnly="True" SortExpression="WorkOrder" ItemStyle-Width="25%" ItemStyle-HorizontalAlign="Center" />
-                            <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" ItemStyle-Width="20%" ItemStyle-HorizontalAlign="Center" />
-                            <asp:BoundField DataField="Repair" HeaderText="Unidades por reparar" SortExpression="Repair" ItemStyle-Width="15%" ItemStyle-HorizontalAlign="Center" ItemStyle-CssClass=" fw-bold" />
+                        </div>
+                    </EmptyDataTemplate>
+
+                    <%--  <Columns>
+                            <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" ItemStyle-HorizontalAlign="Center"/>
+                            <asp:BoundField DataField="WorkOrder" HeaderText="WorkOrder" ReadOnly="True" SortExpression="WorkOrder" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model"  ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="SerialNumber" HeaderText="SerialNumber" SortExpression="SerialNumber"  ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="FailureMode" HeaderText="FailureMode" SortExpression="FailureMode"  ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Side" HeaderText="Side" SortExpression="Side" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="userDx" HeaderText="Registró" SortExpression="userDx" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="dx_Date" HeaderText="Fecha" SortExpression="userDx" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="userRelease" HeaderText="Liberó" SortExpression="date_Release" ItemStyle-HorizontalAlign="Center" />
+                            <asp:BoundField DataField="date_Release" HeaderText="Fecha Liberacion" SortExpression="date_Release" ItemStyle-HorizontalAlign="Center" />
+                        </Columns>--%>
+                    <%--<PagerStyle CssClass="GridPager" />--%>
+                </asp:GridView>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT [ID], [WorkOrder], [Model], [SerialNumber], [FailureMode], [Location], [Side], [userDx], [dx_Date], [Status], [date_Release], [userRelease] FROM [MainRepair] ORDER BY [dx_Date] DESC"></asp:SqlDataSource>
+            </div>
 
 
-                        </Columns>
-                        <PagerStyle CssClass="GridPager" />
-                    </asp:GridView>
-                </div>
-                <asp:LinkButton CssClass="btn btn-dark fw-bold" ID="ExportBtn" runat="server" Visible="false">
+            <div class="input-group mt-2 fixed-bottom">
+                <asp:LinkButton CssClass="btn btn-dark fw-bold" ID="ExportBtn" OnClick="ExportBtn_Click" runat="server" Visible="true">
 <span class="bi bi-printer-fill" aria-hidden="true"></span> &nbsp;Exportar
                 </asp:LinkButton>
-
             </div>
         </div>
 

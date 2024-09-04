@@ -56,14 +56,23 @@
                 </asp:LinkButton>--%>
             <%--<div class="headlines m-0 " ><p>Reparación y  scrap</p></div>--%>
             <asp:LinkButton ID="btnreparacion" CssClass="btn btn-warning btn-lg   rounded-5 d-flex align-items-center justify-content-center  text-white mb-2 " runat="server" Visible="true" PostBackUrl="~/MainRepair.aspx">
-                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-tools text-warning"></i></span>Reparación
+                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-tools text-warning"></i></span>Reparación MAIN
             </asp:LinkButton>
+            <asp:LinkButton ID="btnReparacionScard" CssClass="btn btn-warning btn-lg   rounded-5 d-flex align-items-center justify-content-center  text-white mb-2 " runat="server" Visible="true" PostBackUrl="~/ScanWoRepair.aspx">
+        <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"><i class="bi bi-tools text-warning"></i></span>Reparación SCARD
+</asp:LinkButton>
             <asp:LinkButton ID="btnscrapsalida" CssClass="btn btn-primary btn-lg  rounded-5 d-flex align-items-center justify-content-center mb-2  " runat="server" Visible="true" PostBackUrl="~/RepairValidation.aspx">
-                   <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-check2-circle text-primary mx-auto"></i></span>Validar reparación
+                   <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-check2-circle text-primary mx-auto"></i></span>Validar reparación MAIN
             </asp:LinkButton>
+            <asp:LinkButton ID="btnValidationScard" CssClass="btn btn-primary btn-lg  rounded-5 d-flex align-items-center justify-content-center mb-2  " runat="server" Visible="true" PostBackUrl="~/RepairScardValidation.aspx">
+       <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-check2-circle text-primary mx-auto"></i></span>Validar reparación SCARD
+</asp:LinkButton>
+
             <asp:LinkButton ID="btnScrap" CssClass="btn btn-danger btn-lg   rounded-5 d-flex align-items-center justify-content-center  mb-2  " runat="server" Visible="true" PostBackUrl="~/ScanWoScrap.aspx">
                    <span class="bg-light ms-2 d-flex rounded-5 align-items-center justify-content-center mx-1"> <i class="bi bi-trash3-fill text-danger "></i></span>SCRAP
             </asp:LinkButton>
+
+
         </div>
         
     </form>

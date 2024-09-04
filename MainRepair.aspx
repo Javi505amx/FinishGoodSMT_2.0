@@ -34,7 +34,7 @@
                         <asp:LinkButton runat="server" ID="btnRepirValidation" class=" btn btn-dark border border-0" PostBackUrl="~/RepairValidation.aspx" OnClientClick="if (!confirm('¿Está seguro que desea ir a VALIDACION DE REPARACIONES?')) return false;" Text="Módulo validacion reparacion" ToolTip="Módulo validacion reparacion">
 <span><i class="bi bi-check2-circle fs-4  text-primary fw-bold"></i> </span>
                         </asp:LinkButton>
-                        <asp:LinkButton runat="server" ID="btnScrap" class=" btn btn-dark border border-0" OnClientClick="if (!confirm('¿Está seguro que desea ir al módulo de SCRAP?')) return false;" PostBackUrl="~/MainScrap.aspx" Text="Módulo Scrap" ToolTip="Módulo Scrap">
+                        <asp:LinkButton runat="server" ID="btnScrap" class=" btn btn-dark border border-0" OnClientClick="if (!confirm('¿Está seguro que desea ir al módulo de SCRAP?')) return false;" PostBackUrl="~/ScanWoScrap.aspx" Text="Módulo Scrap" ToolTip="Módulo Scrap">
 <span><i class="bi bi-trash3-fill   text-danger fw-bold"></i> </span>
                         </asp:LinkButton>
                         <asp:LinkButton type="button" ID="logoutBtn" runat="server" class=" btn btn-dark text-danger fs-5" OnClientClick="if (!confirm('¿Está seguro que desea salir del sistema?')) return false;" PostBackUrl="~/login.aspx" title="Exit System">
@@ -162,7 +162,7 @@
                     </div>
                     <div class="form-row mt-2 p-2">
                         <div class="rounded table-responsive ">
-                            <asp:GridView runat="server" ID="myTable" OnRowDataBound="myTable_RowDataBound" OnRowCommand="myTable_RowCommand" HeaderStyle-HorizontalAlign="Center" OnPageIndexChanging="myTable_PageIndexChanging" OnSelectedIndexChanged="myTable_SelectedIndexChanged" CssClass="table table-sm  table-hover table-bordered " ShowHeaderWhenEmpty="false" AutoGenerateColumns="false" DataKeyNames="WorkOrder" AllowPaging="false" BorderStyle="None" Visible="false">
+                            <asp:GridView runat="server" ID="myTable" OnRowDataBound="myTable_RowDataBound" OnRowCommand="myTable_RowCommand" HeaderStyle-HorizontalAlign="Center" OnPageIndexChanging="myTable_PageIndexChanging" OnSelectedIndexChanged="myTable_SelectedIndexChanged" CssClass="table  table-hover table-bordered " ShowHeaderWhenEmpty="false" AutoGenerateColumns="false" DataKeyNames="WorkOrder" AllowPaging="false" BorderStyle="None" Visible="false">
                                 <HeaderStyle CssClass="table-secondary" />
                                 <EmptyDataTemplate>
                                     <div class="empty-state">

@@ -217,5 +217,30 @@ namespace FinishGoodSMT
             } 
              */
         }
+
+        protected void CREATE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SaveChanges_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SAVE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CancelUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void myTable_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
     }
 }

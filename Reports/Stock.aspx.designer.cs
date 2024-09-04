@@ -7,12 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinishGoodSMT
+namespace FinishGoodSMT.Reports
 {
 
 
-    public partial class Menu
+    public partial class Stock
     {
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// LinkButton3 control.
@@ -22,6 +31,15 @@ namespace FinishGoodSMT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+
+        /// <summary>
+        /// btnHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnHome;
 
         /// <summary>
         /// logoutBtn control.
@@ -60,66 +78,57 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label userlabel;
 
         /// <summary>
-        /// btnScanWo control.
+        /// txtStartWO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnScanWo;
+        protected global::System.Web.UI.WebControls.TextBox txtStartWO;
 
         /// <summary>
-        /// btnConsultaMain control.
+        /// txtEndWO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnConsultaMain;
+        protected global::System.Web.UI.WebControls.TextBox txtEndWO;
 
         /// <summary>
-        /// btnreparacion control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnreparacion;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
-        /// btnReparacionScard control.
+        /// btnFilterData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnReparacionScard;
+        protected global::System.Web.UI.WebControls.LinkButton btnFilterData;
 
         /// <summary>
-        /// btnscrapsalida control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnscrapsalida;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// btnValidationScard control.
+        /// ExportBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnValidationScard;
-
-        /// <summary>
-        /// btnScrap control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnScrap;
+        protected global::System.Web.UI.WebControls.LinkButton ExportBtn;
     }
 }

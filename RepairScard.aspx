@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ScrapScard.aspx.cs" Inherits="FinishGoodSMT.ScrapScard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RepairScard.aspx.cs" Inherits="FinishGoodSMT.RepairScard" %>
 
 <!DOCTYPE html>
 
@@ -6,17 +6,17 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" title="Finish Good SMT - SCRAP SCARD" />
+    <meta name="description" title="Finish Good SMT - REPAIR SCARD" />
     <link href="./resources/images/inventronics icon.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="Resources/CSS/styles.css" />
     <link rel="stylesheet" href="Resources/CSS/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>SCARD SCRAP - Finish Good SMT</title>
+    <title>SCARD REPAIR - Finish Good SMT</title>
 </head>
-<body >
-    <form id="form1" runat="server">
+<body>
+        <form id="form1" runat="server">
         <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -26,7 +26,7 @@
                 </button>
                 <div class="collapse navbar-collapse mx-auto px-0" id="navbarSupportedContent">
                     <div class="btn-group ">
-                        <asp:LinkButton runat="server" class="btn btn-dark " ID="LinkButton3" PostBackUrl="~/scanwoscrap.aspx" Text="Regresar" title="Menu - Finish good SMT">
+                        <asp:LinkButton runat="server" class="btn btn-dark " ID="LinkButton3" PostBackUrl="~/scanworepair.aspx" Text="Regresar" title="Menu - Finish good SMT">
     <span><i class="bi bi-chevron-left fs-5"></i> </span>
                         </asp:LinkButton>
                         <asp:LinkButton runat="server" ID="btnHome" class=" btn btn-dark" title="Inicio -  Homepage" PostBackUrl="~/menu.aspx" Text="Home">
@@ -39,7 +39,7 @@
 
                     </div>
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link text-danger fw-bold" href="#" title="">SCRAP SCARD</a>
+                        <a class="nav-link text-warning fw-bold" href="#" title="">REPAIR SCARD</a>
 
                     </div>
                     <div id="form3" runat="server" class="d-flex " role="search">
@@ -107,7 +107,7 @@
 
                 <div class="card border-dark mt-5">
 
-                    <div class="card-header bg-dark text-center text-danger fw-bold fs-4 " runat="server" visible="true">REGISTRAR SCRAP POR PANEL</div>
+                    <div class="card-header bg-dark text-center text-warning fw-bold fs-4 " runat="server" visible="true">REGISTRAR REPARACIONES POR PANEL</div>
 
                     <div class="card-body  text-center m-0 p-0" runat="server">
                         <%--<asp:TextBox ID="txtQRMain" CssClass="txtboxes" runat="server" ForeColor="#0079bc" AutoPostBack="true" Style="text-transform: uppercase" AutoCompleteType="Disabled" OnTextChanged="txtQRMain_TextChanged"></asp:TextBox>--%><br />
@@ -115,12 +115,12 @@
                         <asp:Label runat="server" ID="labelModel" CssClass="text-primary fs-4 fw-bold"></asp:Label><br />
                         <div class="input-field rounded-4 text-center mt-0" id="QR">
                             <span class="bi bi bi-123 p-2"></span>
-                            <asp:TextBox ID="txtQty" runat="server" TextMode="Number" AutoPostBack="true" CssClass="form-control fs-2 text-center" placeholder="" OnTextChanged="txtQty_TextChanged1" AutoCompleteType="Disabled" CausesValidation="true"></asp:TextBox><br />
+                            <asp:TextBox ID="txtQty" runat="server" TextMode="Number" AutoPostBack="true" CssClass="form-control fs-2 text-center" placeholder="" OnTextChanged="txtQty_TextChanged" AutoCompleteType="Disabled" CausesValidation="true"></asp:TextBox><br />
 
                             <%--<asp:LinkButton CssClass="btnReset" ID="LinkButton1" runat="server" Visible="false" OnClick="btnReset_Click"><span class="bi bi-arrow-repeat p-2"></span></asp:LinkButton>--%>
                         </div>
-                        <asp:Label runat="server" ID="errorQty" Font-Size="Large" CssClass="text-danger mx-auto text-center" Text="La cantidad ingresada excede la cantidad por panel." Visible="false"></asp:Label><br />
-                        <asp:RangeValidator ID="validator" ControlToValidate="txtQty" ErrorMessage="La cantidad ingresada excede la cantidad por panel" CssClass="text-danger" Font-Size="Large" runat="server"></asp:RangeValidator>
+                        <asp:Label runat="server" ID="errorQty" Font-Size="Large" CssClass="text-warning mx-auto text-center" Text="La cantidad ingresada excede la cantidad por panel." Visible="false"></asp:Label><br />
+                        <asp:RangeValidator ID="validator" ControlToValidate="txtQty" ErrorMessage="La cantidad ingresada excede la cantidad por panel" CssClass="text-warning" Font-Size="Large" runat="server"></asp:RangeValidator>
 
 
                     </div>

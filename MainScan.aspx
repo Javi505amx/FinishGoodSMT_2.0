@@ -37,7 +37,7 @@
                         <asp:LinkButton runat="server" ID="btnRepirValidation" class=" btn btn-dark border border-0" PostBackUrl="~/RepairValidation.aspx" OnClientClick="if (!confirm('¿Está seguro que desea ir a VALIDACION DE REPARACIONES?')) return false;" Text="Módulo reparacion" ToolTip="Módulo validacion reparacion">
 <span><i class="bi bi-check2-circle fs-4  text-primary fw-bold"></i> </span>
                         </asp:LinkButton>
-                        <asp:LinkButton runat="server" ID="btnScrap" class=" btn btn-dark border border-0" OnClientClick="if (!confirm('¿Está seguro que desea ir al módulo de SCRAP?')) return false;" PostBackUrl="~/MainScrap.aspx" Text="Módulo Scrap" ToolTip="Módulo Scrap">
+                        <asp:LinkButton runat="server" ID="btnScrap" class=" btn btn-dark border border-0" OnClientClick="if (!confirm('¿Está seguro que desea ir al módulo de SCRAP?')) return false;" PostBackUrl="~/ScanWoScrap.aspx" Text="Módulo Scrap" ToolTip="Módulo Scrap">
         <span><i class="bi bi-trash3-fill   text-danger fw-bold"></i> </span>
                         </asp:LinkButton>
                         <asp:LinkButton type="button" ID="logoutBtn" runat="server" class=" btn btn-dark " OnClientClick="if (!confirm('¿Está seguro que desea salir del sistema?')) return false;" PostBackUrl="~/login.aspx" title="Exit System">

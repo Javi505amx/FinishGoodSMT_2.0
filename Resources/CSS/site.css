@@ -23,15 +23,16 @@ body {
     width: 200px;
     text-align: center;
   }
-  #btnScrap,
-  #btnscrapsalida,
-  #btnreparacion,
-  #btnConsultaMain,
-  #btnScanWo {
-    font-size: 1.8em;
-    width: 65%;
-    margin: auto;
-  }
+    #btnScrap,
+    #btnscrapsalida,
+    #btnreparacion,
+    #btnConsultaMain,
+    #btnReparacionScard,
+    #btnScanWo, #btnValidationScard, .btn {
+        font-size: 1.8em;
+        width: 65%;
+        margin: auto;
+    }
 }
 @media (min-width: 1100px) {
   /*code for laptop*/
@@ -43,16 +44,16 @@ body {
     min-height: 100vh;
     font-size: 0.88em;
   }
-  #btnScrap,
-  #btnscrapsalida,
-  #btnreparacion,
-  #btnConsultaMain,
-  #btnScanWo {
-    font-size: 1.4em;
-    text-wrap: balance;
-    width: 70%;
-    margin: auto;
-  }
+    #btnScrap,
+    #btnscrapsalida,
+    #btnreparacion,
+    #btnConsultaMain,
+    #btnReparacionScard,
+    #btnScanWo, #btnValidationScard, .btn {
+        font-size: 1.4em;
+        width: 70%;
+        margin: auto;
+    }
 }
 @media (max-width: 1100px) {
   /*code for ipad and netbooks*/
@@ -65,16 +66,16 @@ body {
     width: 200px;
     text-align: center;
   }
-  #btnScrap,
-  #btnscrapsalida,
-  #btnreparacion,
-  #btnConsultaMain,
-  #btnScanWo {
-    font-size: 1em;
-    text-wrap: balance;
-    width: 60%;
-    margin: auto;
-  }
+    #btnScrap,
+    #btnscrapsalida,
+    #btnreparacion,
+    #btnReparacionScard,
+    #btnConsultaMain,
+    #btnScanWo, #btnValidationScard, .btn {
+        font-size: 1em;
+        width: 60%;
+        margin: auto;
+    }
 }
 @media (max-width: 850px) {
 }
@@ -96,15 +97,16 @@ body {
   #myTable {
     font-size: 1em;
   }
-  #btnScrap,
-  #btnscrapsalida,
-  #btnreparacion,
-  #btnConsultaMain,
-  #btnScanWo {
-    font-size: 1.4em;
-    width: 65%;
-    margin: auto;
-  }
+    #btnScrap,
+    #btnscrapsalida,
+    #btnreparacion,
+    #btnReparacionScard,
+    #btnConsultaMain,
+    #btnScanWo, #btnValidationScard, .btn {
+        font-size: 1.4em;
+        width: 65%;
+        margin: auto;
+    }
 }
 @media (max-width: 480px) {
   /*code for mobile here*/
@@ -113,25 +115,25 @@ body {
   }
   html {
     font-size: 1rem;
-    text-wrap: balance;
     min-height: 100vh;
     min-width: 100vw;
   }
-  #btnScrap,
-  #btnscrapsalida,
-  #btnreparacion,
-  #btnConsultaMain,
-  #btnScanWo {
-    font-size: 4em;
-    width: 100%;
-  }
+    #btnScrap,
+    #btnscrapsalida,
+    #btnreparacion,
+    #btnReparacionScard,
+    #btnConsultaMain,
+    #btnScanWo, #btnValidationScard, .btn {
+        font-size: 4em;
+        width: 100%;
+    }
   .container p {
     font-size: small;
   }
   .container a span i {
     font-size: 1.3em;
   }
-  .conatiner a span {
+  .container a span {
     width: 1.2em;
     height: 1.2em;
     margin: 0;

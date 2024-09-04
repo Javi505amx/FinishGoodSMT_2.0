@@ -11,7 +11,7 @@ namespace FinishGoodSMT
 {
 
 
-    public partial class ScrapScard
+    public partial class RepairScardValidation
     {
 
         /// <summary>
@@ -33,13 +33,31 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
 
         /// <summary>
-        /// btnHome control.
+        /// btnFG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnHome;
+        protected global::System.Web.UI.WebControls.LinkButton btnFG;
+
+        /// <summary>
+        /// btnReparacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnReparacion;
+
+        /// <summary>
+        /// btnScrap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnScrap;
 
         /// <summary>
         /// logoutBtn control.
@@ -78,6 +96,15 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label userlabel;
 
         /// <summary>
+        /// divInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInfo;
+
+        /// <summary>
         /// txtWorkOrder control.
         /// </summary>
         /// <remarks>
@@ -114,13 +141,13 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label dataPieces;
 
         /// <summary>
-        /// Label6 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// dataAcumWO control.
@@ -132,13 +159,13 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label dataAcumWO;
 
         /// <summary>
-        /// Label8 control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// dataAcumDia control.
@@ -150,13 +177,13 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label dataAcumDia;
 
         /// <summary>
-        /// Label10 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// dataQtyRepair control.
@@ -168,13 +195,13 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label dataQtyRepair;
 
         /// <summary>
-        /// Label12 control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// dataQtyScrap control.
@@ -186,40 +213,58 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label dataQtyScrap;
 
         /// <summary>
-        /// labelModel control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelModel;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtQty control.
+        /// QR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQty;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl QR;
 
         /// <summary>
-        /// errorQty control.
+        /// txtWorkOrderQR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorQty;
+        protected global::System.Web.UI.WebControls.TextBox txtWorkOrderQR;
 
         /// <summary>
-        /// validator control.
+        /// btnReset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator validator;
+        protected global::System.Web.UI.WebControls.LinkButton btnReset;
+
+        /// <summary>
+        /// btnResetAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnResetAll;
+
+        /// <summary>
+        /// myTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView myTable;
 
         /// <summary>
         /// dataQRSN control.
@@ -256,23 +301,5 @@ namespace FinishGoodSMT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label alertText;
-
-        /// <summary>
-        /// res2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl res2;
-
-        /// <summary>
-        /// res control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label res;
     }
 }

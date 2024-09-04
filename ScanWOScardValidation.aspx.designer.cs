@@ -11,8 +11,17 @@ namespace FinishGoodSMT
 {
 
 
-    public partial class Menu
+    public partial class ScanWOScardValidation
     {
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// LinkButton3 control.
@@ -60,66 +69,39 @@ namespace FinishGoodSMT
         protected global::System.Web.UI.WebControls.Label userlabel;
 
         /// <summary>
-        /// btnScanWo control.
+        /// txtWorkOrdeValidation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnScanWo;
+        protected global::System.Web.UI.WebControls.TextBox txtWorkOrdeValidation;
 
         /// <summary>
-        /// btnConsultaMain control.
+        /// alert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnConsultaMain;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert;
 
         /// <summary>
-        /// btnreparacion control.
+        /// AlertIcon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnreparacion;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertIcon;
 
         /// <summary>
-        /// btnReparacionScard control.
+        /// alertText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnReparacionScard;
-
-        /// <summary>
-        /// btnscrapsalida control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnscrapsalida;
-
-        /// <summary>
-        /// btnValidationScard control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnValidationScard;
-
-        /// <summary>
-        /// btnScrap control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnScrap;
+        protected global::System.Web.UI.WebControls.Label alertText;
     }
 }

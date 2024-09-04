@@ -110,63 +110,6 @@
                     });
                 });
             </script>
-            <%--<div id="divInfo" visible="false" class="row row-cols-1 row-cols-md-4 g-2 mt-3" runat="server">
-                <div class="col">
-                    <div class=" card border-primary g-0">
-                        <div class="card-header bg-primary border-0 text-center text-white fw-bold">WORKORDER</div>
-                        <div class="card-body ">
-                            <div class="input-group mx-auto">
-                                <asp:Label ID="Label6" runat="server" CssClass="form-control text-primary fs-5 border-0 fw-bold" Text="M5107-24040008"></asp:Label>
-                                <asp:Label ID="Label8" runat="server" CssClass=" fs-6  fw-bold  border-0 bg-white text-center mx-auto input-group-text" Text="1680 PCS" Style=""></asp:Label>
-
-                            </div>
-                            <asp:Label ID="Label1" runat="server" CssClass="  fs-6 fw-bold form-control border-0" Text="MX1EUM150S210DG-00000C"></asp:Label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-success ">
-                        <div class=" card-header bg-success text-center text-white fw-bold">FINISH GOOD</div>
-                        <div class="card-body  ">
-                            <div class=" input-group text-end">
-                                <asp:Label ID="dataAcumWO" runat="server" CssClass=" text-success text-start fs-3 fw-bold form-control border-0" Text=""></asp:Label>
-                                <span class=" fs-4  text-success bi bi-cpu-fill border-0"></span>
-                                <br />
-                            </div>
-                            <asp:Label ID="Label2" runat="server" Text="Acumulado total" CssClass="text-body-secondary fs-6 "></asp:Label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-warning ">
-                        <div class="card-header bg-warning text-center text-white fw-bold ">REPARACIÓN</div>
-                        <div class="card-body ">
-                            <div class="input-group text-end">
-                                <asp:Label ID="dataQtyRepair" runat="server" CssClass="text-start form-control text-warning fs-3 border-0 fw-bold"></asp:Label>
-                                <span class=" fs-3  text-warning  border-0"><i class="bi bi-tools"></i></span>
-
-                            </div>
-                            <asp:Label ID="Label3" runat="server" Text="Unidades por reparar" CssClass=" fs-6  text-body-secondary "></asp:Label>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-danger ">
-                        <div class="card-header bg-danger text-center text-white fw-bold ">SCRAP</div>
-                        <div class="card-body ">
-
-                            <div class="input-group text-end">
-                                <asp:Label CssClass="text-start text-danger fs-3  form-control border-0 fw-bold" runat="server" ID="dataQtyScrap"></asp:Label>
-                                <span class=" fs-3  text-danger border-0"><i class="bi bi-trash3-fill "></i></span>
-
-                            </div>
-                            <asp:Label CssClass=" fs-6 text-body-secondary " ID="Label7" runat="server" Text="Unidades scrappeadas"></asp:Label>
-
-                        </div>
-                    </div>
-                </div>
-            </div>--%>
             <div class="form-row mt-3">
                 <div class="rounded table-responsive ">
                     <asp:GridView runat="server" ID="myTable" OnRowDataBound="myTable_RowDataBound" HeaderStyle-HorizontalAlign="Center" OnPageIndexChanging="myTable_PageIndexChanging" OnSelectedIndexChanged="myTable_SelectedIndexChanged" CssClass="table  table-hover table-bordered " ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" BorderStyle="None">

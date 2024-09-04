@@ -156,7 +156,7 @@ namespace FinishGoodSMT
                         dataBindInfoWO();
                         btnReset.Visible = true;
                         txtQRMain.Text = string.Empty;
-                        RepairBtn.Visible = true;
+                        //RepairBtn.Visible = true;
                         break;
                     case 2:
                         alert.Visible = true;
@@ -278,7 +278,7 @@ namespace FinishGoodSMT
             alert.Attributes.Add("class", " alert alert-warning  alert-dismissible  w-100 text-center fixed-bottom ");
             alertText.Text = "Operación cancelada: Escanee otra unidad QR";
             ClientScript.RegisterStartupScript(GetType(), "HideLabel", "<script type=\"text/javascript\">setTimeout(\"document.getElementById('" + alert.ClientID + "').style.display='none'\",4000)</script>");
-            RepairBtn.Visible = false;
+            //RepairBtn.Visible = false;
 
         }
 
